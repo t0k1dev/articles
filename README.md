@@ -1,37 +1,51 @@
-# Articles
+# tokidev
 
-A collection of technical blog articles written in Markdown.
+Content repository for the tokidev brand. All content is written
+in Markdown.
 
 ## Structure
 
 ```
-articles/   - Published articles
-drafts/     - Work-in-progress articles
-templates/  - Article templates
+articles/
+  published/    - Published articles
+  drafts/       - Work-in-progress articles
+  plans/        - Article plans and outlines
+  templates/    - Reusable article templates
+
+instagram/
+  published/    - Approved and posted content
+  drafts/       - Work-in-progress captions and copy
+  plans/        - Campaign and content plans
+
+video/
+  published/    - Final approved scripts
+  drafts/       - Work-in-progress scripts
+  plans/        - Video plans and outlines
+
+brand/
+  guidelines/   - Voice, tone, and style documentation
+  assets/       - Brand reference files
+
+investigation/ - Shared research across all content types
 ```
 
-## Writing a New Article
+## Content Types
 
-1. Create a file in `drafts/` using a kebab-case slug
-   (e.g., `drafts/building-cli-tools-in-go.md`).
-2. Add frontmatter at the top:
+**Articles** — long-form technical blog posts published on the
+tokidev blog.
 
-```yaml
----
-title: "Building CLI Tools in Go"
-slug: building-cli-tools-in-go
-date: 2026-03-15
-author: t0k1dev
-tags: [go, cli, tutorial]
-status: draft
-description: >
-  A short summary of the article.
----
-```
+**Instagram** — post captions, copy, and hashtag sets for the
+@t0k1dev account.
 
-3. Write the article body below the frontmatter.
+**Video** — scripts for YouTube videos and Reels.
 
-## Publishing
+**Brand** — voice guidelines, tone documentation, and brand assets.
 
-Move the file from `drafts/` to `articles/` and set
-`status: published` in the frontmatter.
+## Conventions
+
+- Filenames: kebab-case slugs, no dates or prefixes.
+- Every file starts with YAML frontmatter.
+- Prose wraps at 80 characters (exceptions: URLs, code blocks,
+  frontmatter values).
+- See `AGENTS.md` for full conventions, frontmatter schemas, and
+  per-type workflows.
