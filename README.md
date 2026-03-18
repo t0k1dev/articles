@@ -12,6 +12,12 @@ articles/
   plans/        - Article plans and outlines
   templates/    - Reusable article templates
 
+carousel/
+  published/    - Approved and posted carousels
+  drafts/       - Work-in-progress carousels
+  plans/        - Carousel content plans
+  templates/    - Reusable slide structure templates
+
 instagram/
   published/    - Approved and posted content
   drafts/       - Work-in-progress captions and copy
@@ -33,6 +39,8 @@ investigation/ - Shared research across all content types
 
 **Articles** — long-form technical blog posts published on the
 tokidev blog.
+
+**Carousel** — slide-based content for Instagram and LinkedIn.
 
 **Instagram** — post captions, copy, and hashtag sets for the
 @t0k1dev account.

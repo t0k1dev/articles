@@ -9,6 +9,7 @@ written in Markdown. No build system or application code.
 
 Content types:
 - **Articles** — long-form technical blog posts
+- **Carousel** — slide-based content for Instagram and LinkedIn
 - **Instagram** — post captions, copy, and hashtag sets
 - **Video** — scripts for YouTube videos and Reels
 - **Brand** — guidelines, voice documentation, and assets
@@ -21,6 +22,12 @@ articles/
   drafts/       - Work-in-progress articles
   plans/        - Article plans and outlines
   templates/    - Reusable article templates
+
+carousel/
+  published/    - Approved and posted carousels
+  drafts/       - Work-in-progress carousels
+  plans/        - Carousel content plans
+  templates/    - Reusable slide structure templates
 
 instagram/
   published/    - Approved and posted content
@@ -99,6 +106,44 @@ Use lowercase. Prefer existing tags. Common tags: `go`,
 1. Create `articles/drafts/<slug>.md` with complete
    frontmatter and `status: draft`.
 2. To publish: move to `articles/published/` and set
+   `status: published`.
+
+---
+
+## Carousel
+
+Slide-based content for Instagram and LinkedIn. Each file
+represents one carousel — all slides in a single document.
+
+### Frontmatter
+
+```yaml
+---
+title: "Carousel title"
+slug: carousel-slug
+date: 2026-03-15
+author: t0k1dev
+tags: [ai, devtools]
+status: draft              # draft | published
+platform: instagram        # instagram | linkedin | both
+slides: 10
+---
+```
+
+### Body
+
+- Each slide starts with `## Slide N` (e.g. `## Slide 1`).
+- First slide is the cover — hook only, no body text.
+- Last slide is the CTA — call to action and handle.
+- Keep slide copy short: 1-3 lines per slide maximum.
+- Use `**bold**` for emphasis within a slide.
+- Add a `### Notes` block under a slide for design or
+  visual direction notes (not published copy).
+
+### Workflow
+
+1. Create `carousel/drafts/<slug>.md`.
+2. To publish: move to `carousel/published/` and set
    `status: published`.
 
 ---
